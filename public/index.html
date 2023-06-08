@@ -12,26 +12,62 @@
   <title>Platzi Travel</title>
 </head>
 
-<body>
+<body class="font-Montserrat">
   <nav></nav>
   <div id="tab_bar"></div>
   <section class="w-full h-screen">
     <div id="home">
       <div class="w-full h-3/4">
         <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
-          <input class="outline-none p-4 rounded-full shadow-sm" type="search" name="" id=""
-            placeholder="San Francisco">
-          <button class="w-36 rounded-full text-lg text-primary font-semibold shadow-sm p-4 bg-white ">
+          <input
+            class="outline-none p-4 rounded-full shadow-sm transition-all duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12"
+            type="search" name="" id="" placeholder="San Francisco">
+          <button
+            class="w-48 rounded-full text-lg text-primary font-semibold shadow-sm p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-2 hover:scale-110">
             Explorar
           </button>
         </div>
         <div class="w-full h-full">
-          <img src="./img/sanFrancisco.jpg" alt="">
+          <img class="w-full bg-contain" src="./img/sanFrancisco.jpg" alt="">
         </div>
 
       </div>
     </div>
-    <div id="recomendadas"></div>
+    <div class="p-6 rounded-lg" id="recomendados">
+      <p class="text-3xl font-semibold text-primary">Recomendados</p>
+      <div class="w-auto h-72 flex space-x-6 items-center mt-6 overflow-y-hidden overscroll-x-contain">
+
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-norway bg-cover"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg">
+            <p class="px-4 py-2 text-white text-bold text-xl">Noruega</p>
+            <p class="px-4 text-white text-md text-thin">Hermosos paisajes</p>
+          </div>
+        </div>
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-new_york bg-cover"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg">
+            <p class="px-4 py-2 text-tertiary text-bold text-xl">Nueva York</p>
+            <p class="px-4 text-tertiary text-md text-thin">La ciudad que nunca duerme</p>
+          </div>
+        </div>
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-iceland bg-cover"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg">
+            <p class="px-4 py-2 text-white text-bold text-xl">Islandia</p>
+            <p class="px-4 text-white text-md text-thin">Experiencias únicas</p>
+          </div>
+        </div>
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-bali bg-cover"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg">
+            <p class="px-4 py-2 text-white text-bold text-xl">Bali</p>
+            <p class="px-4 text-white text-md text-thin">Destinos increíbles</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <div id="rentas_destacadas"></div>
   </section>
   <footer></footer>
