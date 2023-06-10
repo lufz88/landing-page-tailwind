@@ -2,7 +2,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	content: ['./src/**/*.{html,js}', './public/*.{html,js}'],
+	content: ['./public/index.html', './src/**/*.{html,js}'],
 	theme: {
 		fontFamily: {
 			Montserrat: ['"Montserrat"', 'sans-serif'],
