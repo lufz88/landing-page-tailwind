@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -19,19 +19,22 @@
   <section class="w-full h-auto">
     <div id="home">
       <div class="w-full h-3/4">
-        <div class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center">
+        <div
+          class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pl-16 lg:justify-start">
           <input
-            class="outline-none p-4 rounded-full shadow-sm transition-all duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12"
+            class="outline-none p-4 rounded-full shadow-sm transition-all duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden"
             type="search" name="" id="" placeholder="San Francisco">
+          <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+            <p class="text-4xl ml-2 font-bold text-primary lg:pt-20">Encuentra más ubicaciones como esta</p>
+          </div>
           <button
             class="w-48 rounded-full text-lg text-primary font-semibold shadow-sm p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-2 hover:scale-110">
             Explorar
           </button>
         </div>
-        <div class="w-full h-full">
-          <img class="w-full" src="./img/sanFrancisco.jpg" alt="">
+        <div class="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+          <img class="lg:hidden" src="./img/sanFrancisco.jpg" alt="">
         </div>
-
       </div>
     </div>
     <div class="p-6 rounded-lg h-auto" id="recomendados">
@@ -66,31 +69,61 @@
             <p class="px-4 text-tertiary text-md text-thin">Destinos increíbles</p>
           </div>
         </div>
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-sydney bg-cover"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg">
+            <p class="px-4 py-2 text-white text-bold text-xl">Sydney</p>
+            <p class="px-4 text-white text-md text-thin">Conoce la increíble casa de la</p>
+          </div>
+        </div>
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-switzerland bg-cover"></div>
+          <div class="w-full h-2/5 bg-white rounded-b-lg">
+            <p class="px-4 py-2 text-tertiary text-bold text-xl">Suiza</p>
+            <p class="px-4 text-tertiary text-md text-thin">El mejor chocolate del mundo</p>
+          </div>
+        </div>
+        <div class="Card">
+          <div class="w-full h-3/5 rounded-t-lg bg-europe bg-cover"></div>
+          <div class="w-full h-2/5 bg-secondary rounded-b-lg">
+            <p class="px-4 py-2 text-white text-bold text-xl">Europa</p>
+            <p class="px-4 text-white text-md text-thin">Conoce la historia de occidente</p>
+          </div>
+        </div>
 
       </div>
     </div>
     <div class="px-6 w-full h-auto" id="rentas_destacadas">
       <p class="text-3xl text-primary font-semibold pb-6 mb-2">Rentas destacadas</p>
-      <div class="w-full flex flex-col space-y-6 items-center justify-center">
-        <div>
-          <div class="w-full h-96 bg-chicago bg-cover rounded-xl">
+      <div
+        class="w-full flex flex-col space-y-6 items-center justify-center lg:grid lg:grid-cols-2 lg:grid-rows-3 gap-2">
+        <div class="w-full lg:col-span-full">
+          <div class="w-full h-96 bg-chicago bg-cover bg-center rounded-xl ">
             <p class="CardTitle">Chicago</p>
             <p class="text-sm pl-8 text-black  mr-24">2 habitaciones, baño y cocina</p>
           </div>
         </div>
-        <div>
-          <div class="w-full h-96 bg-bali bg-cover rounded-xl">
+        <div class="w-full lg:col-span-1 lg:row-span-2 lg:h-full">
+          <div class="w-full h-96 bg-bali bg-center bg-cover rounded-xl lg:h-full">
             <p class="CardTitle">Bali</p>
             <p class="text-sm pl-8 text-black  mr-24">2 habitaciones, baño y cocina</p>
           </div>
         </div>
-        <div>
-          <div class="w-full h-96 bg-LA bg-cover rounded-xl">
+        <div class="w-full lg:col-span-1 lg:row-span-1 lg:h-full">
+          <div class="w-full h-96 bg-LA bg-center rounded-xl lg:h-full">
             <p class="CardTitle">LA</p>
             <p class="text-sm pl-8 text-black  mr-24">2 habitaciones, baño y cocina</p>
           </div>
         </div>
+        <div class="w-full lg:col-span-1 lg:row-span-1 lg:h-full">
+          <div class="w-full h-96 bg-miami bg-center rounded-xl lg:h-full">
+            <p class="CardTitle">Miami</p>
+            <p class="text-sm pl-8 text-black  mr-24">2 habitaciones, baño y cocina</p>
+          </div>
+        </div>
+
       </div>
+    </div>
 
     </div>
     <div class="w-full h-auto" id="faqs">
@@ -122,14 +155,15 @@
       </div>
     </div>
   </section>
-  <footer class="w-full h-auto bg-gray-50 p-6 space-y-2">
-    <p class="text-lg">Acerca de nosotros</p>
-    <p class="text-sm text-gray-300">Inversionistas</p>
-    <p class="text-sm text-gray-300">Empleos</p>
-    <p class="text-sm text-gray-300">Terminos y Condiciones</p>
-    <p class="text-sm text-gray-300">Platzi Travel, Inc.</p>
+  <footer class="w-full h-auto mt-4 bg-gray-200 p-6  space-y-2">
+    <p class="text-lg text-primary">Acerca de nosotros</p>
+    <p class="text-sm text-secondary">Inversionistas</p>
+    <p class="text-sm text-secondary">Empleos</p>
+    <p class="text-sm text-secondary">Terminos y Condiciones</p>
+    <p class="text-sm text-secondary">Platzi Travel, Inc.</p>
   </footer>
-  <div class="w-full h-16 bg-white fixed bottom-0 shadow-md flex space-x-8 items-center justify-center" id="tab_bar">
+  <div class="w-full h-16 bg-white fixed bottom-0 shadow-md flex space-x-8 items-center justify-center lg:hidden"
+    id="tab_bar">
     <a href="#home">
       <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path class="fill-gray-300"
